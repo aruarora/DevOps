@@ -1,0 +1,500 @@
+  104  ls -ltr
+  105  cd ..
+  106  pwd
+  107  ls -ltar .*
+  108  cd ~/.apikey/
+  109  ls -ltr
+  110  ssh -i oci_api_key.pem ocp@130.61.202.49
+  111  cd ..
+  112  cd ~/.ssh/
+  113  ls -ltr
+  114  ssh -i oci_key.pem ocp@130.61.202.49
+  115  ssh -i id_rsa ocp@130.61.202.49
+  116  exit
+  117  cd ~/.ssh/
+  118  ssh -i id_rsa opc@158.101.161.36
+  119  ssh -i id_rsa opc@130.61.202.49
+  120  ssh -i id_rsa opc@158.101.161.36
+  121  pwd
+  122  ssh opc@158.101.161.36 -i id_rsa
+  123  ssh opc@158.101.161.36 -i id_rsa
+  124  ssh opc@158.101.161.36 -i id_rsa
+  125  ssh opc@158.101.161.36 -i id_rsa
+  126  exit
+  127  cd ~/.ssh/
+  128  ssh -i id_rsa opc@158.101.161.36
+  129  ssh -i id_rsa opc@158.101.161.36
+  130  exit
+  131  ssh -i ~/.ssh/id_rsa opc@130.61.232.227
+  132  ssh -i ~/.ssh/id_rsa opc@130.61.232.227
+  133  ssh -i ~/.ssh/id_rsa opc@130.61.232.227
+  134  exit
+  135  ssh -i ~/.ssh/id_rsa opc@130.61.232.227
+  136  pwd
+  137  cd ~/.ssh/
+  138  ls -ltr
+  139  ssh-keygen -b 2048 -t rsa
+  140  ls -ltr
+  141  ssh -i ~/.ssh/id_rsa opc@130.61.32.193
+  142  ssh -i ~/.ssh/id_rsa opc@130.61.232.227
+  143  ssh -i ~/.ssh/id_rsa opc@130.61.232.227
+  144  ssh -i ~/.ssh/id_rsa opc@130.61.32.193
+  145  ssh -i ~/.ssh/id_rsa opc@130.61.232.227
+  146  ssh -i ~/.ssh/id_rsa opc@130.61.232.227
+  147  exit
+  148  cd ~/.ssh/
+  149  ls -ltr
+  150  ssh -i id_rsa opc@130.61.232.227
+  151  ssh -i id_rsa opc@130.61.232.227
+  152  ssh -i id_rsa opc@130.61.232.227
+  153  ssh -i id_rsa opc@130.61.232.227
+  154  ssh -i id_rsa opc@130.61.232.227
+  155  ssh -i id_rsa opc@130.61.232.227
+  156  ssh -i id_rsa opc@130.61.232.227
+  157  ssh -i id_rsa opc@130.61.232.227
+  158  ssh -i id_rsa opc@130.61.202.137
+  159  exit
+  160  vagrant ssh
+  161  vagrant up
+  162  vagrant ssh
+  163  cd 
+  164  ARUARORA@ARUARORA-AE MINGW64 ~
+  165  $ vagrant ssh
+  166  VM must be created before running this command. Run `vagrant up` first.
+  167  ARUARORA@ARUARORA-AE MINGW64 ~
+  168  $ vagrant up
+  169  Bringing machine 'default' up with 'virtualbox' provider...
+  170  ==> default: Box 'base' could not be found. Attempting to find and install...
+  171      default: Box Provider: virtualbox
+  172      default: Box Version: >= 0
+  173  ==> default: Box file was not detected as metadata. Adding it directly...
+  174  ==> default: Adding box 'base' (v0) for provider: virtualbox
+  175      default: Downloading: base
+  176      default:
+  177  An error occurred while downloading the remote file. The error
+  178  message, if any, is reproduced below. Please fix this error and try
+  179  again.
+  180  Couldn't open file C:/Users/ARUARORA/base
+  181  ARUARORA@ARUARORA-AE MINGW64 ~
+  182  $ vagrant ssh
+  183  VM must be created before running this command. Run `vagrant up` first.
+  184  ARUARORA@ARUARORA-AE MINGW64 ~
+  185  $ cd
+  186  exit
+  187  clear
+  188  cd C:\HashiCorp\Vagrant\bin
+  189  cd /c/HashiCorp/Vagrant/bin/
+  190  vagrant up
+  191  vagrant init
+  192  cd /c/Users/ARUARORA/
+  193  vagrant ssh
+  194  vagrant up
+  195  vagrant init
+  196  pwd
+  197  ls -latr
+  198  vagrant up
+  199  pwd
+  200  cd base
+  201  pwd
+  202  pwd
+  203  pwd
+  204  cd /d/Trainings/7am-vagrant/centos7/
+  205  pwd
+  206  vagrant init centos/7
+  207  vagrant up
+  208  pwd
+  209  vagrant init centos/7.2
+  210  rm -r *
+  211  vagrant init
+  212  vagrant up
+  213  rm -r *
+  214  vagrant init centos/7.2
+  215  vagrant up
+  216  vagrant -v
+  217  uname -r
+  218  vagrant init centos/7
+  219  rm-r *
+  220  rm -r *
+  221  vagrant init centos/7
+  222  vagrant up
+  223  vagrant ssh
+  224  vagrant suspend
+  225  logout
+  226  cd /d/Trainings/7am-vagrant/centos7/
+  227  vagrant up
+  228  vagrant ssh
+  229  cd ../ubuntu18/
+  230  vagrant init ubuntu/18
+  231  vagrant up
+  232  vagrant up
+  233  rm -r *
+  234  vagrant init ubuntu/bionic64
+  235  vagarant up
+  236  vagrant up
+  237  vagrant up
+  238  vagrant ssh
+  239  vagrant suspend
+  240  cd ../centos7/
+  241  ls -ltr
+  242  du -sh *
+  243  df -k
+  244  du -k
+  245  du -k | cut -f1
+  246  du -k | cut -f2
+  247  du -k | cut -f1
+  248  ls -ltr
+  249  ls -latr
+  250  vagrant suspend
+  251  logout
+  252  vagrant ssh
+  253  cd /d/Trainings/7am-vagrant/centos7/
+  254  vagrant ssh
+  255  vagrant up
+  256  vagrant ssh
+  257  vagrant ssh
+  258  vagrant ssh
+  259  vagrant --help
+  260  vagrant up
+  261  vagrant --help
+  262  vagrant halt
+  263  vagrant up
+  264  vagrant ssh
+  265  vim Vagrantfile 
+  266  cat Vagrantfile 
+  267  vagrant ssh
+  268  vagrant reload
+  269  cd /d/Trainings/7am-vagrant/ubuntu
+  270  cd /d/Trainings/7am-vagrant/
+  271  ls
+  272  cd ubuntu18/
+  273  vagrant up
+  274  vagrant ssh
+  275  vim Vagrantfile 
+  276  vagrant reload
+  277  pwd
+  278  cd /d/Trainings/7am-vagrant/centos7/
+  279  vagrant ssh
+  280  vagrant up
+  281  vagrant ssh
+  282  exit
+  283  cd /d/Trainings/7am-vagrant/ubuntu18/
+  284  vagrant up
+  285  vagrant ssh
+  286  exit
+  287  echo $PROXY_HTTP
+  288  netstat -an | grep 80
+  289  exit
+  290  cd /d/Trainings/7am-vagrant/vagresearch/
+  291  vagrant init
+  292  ls
+  293  pwd
+  294  vagrant reload
+  295  vagrant reload
+  296  pwd
+  297  vagrant up
+  298  vagrant up
+  299  vagrant login
+  300  nano Vagrantfile
+  301  vagrant login
+  302  vagrant login
+  303  vagrant up
+  304  vagrant plugin install vagrant-proxyconf
+  305  vagrant up
+  306  vagrant ssh
+  307  vagrant reload
+  308  vagrant reload
+  309  vi Vagrantfile 
+  310  vagrant reload
+  311  cd /d/Trainings/7am-vagrant/vagresearch/
+  312  vagrant up
+  313  ifconfig
+  314  ipconfig
+  315  ipconfig
+  316  pwd
+  317  cd /d/Trainings/
+  318  cd 7am-vagrant/
+  319  ls
+  320  cd vagresearch/
+  321  pwd
+  322  pwd
+  323  vagrant up
+  324  vagrant ssh
+  325  exit
+  326  cd /d/Trainings/7am-vagrant/vagresearch/
+  327  vagarant ssh
+  328  vagrant ssh
+  329  vagrant up
+  330  ifconfig
+  331  ipconfig
+  332  vi Vagrantfile 
+  333  more Vagrantfile 
+  334  cat Vagrantfile 
+  335  pwd
+  336  vagrant reload
+  337  vagrant provision
+  338  vi Vagrantfile 
+  339  vagrant ssh
+  340  vi Vagrantfile 
+  341  vagrant reload --provision
+  342  vi Vagrantfile
+  343  cat Vagrantfile 
+  344  vagrant reload --provision
+  345  vi Vagrantfile
+  346  vagrant reload --provision
+  347  vagrant ssh
+  348  vi Vagrantfile
+  349  vagrant reload --provision
+  350  pwd
+  351  vagrant ssh
+  352  logout
+  353  cd /d/Trainings/7am-vagrant/vagresearch/
+  354  vagrant up
+  355  vagrant ssh
+  356  vagrant ssh
+  357  exit
+  358  pwd cd /d/Trainings/
+  359  ls -ltr
+  360  pwd
+  361  cd /d/Trainings/
+  362  pwd
+  363  ls
+  364  cd DOCKER/
+  365  ls -ltr
+  366  exit
+  367  cd /d/Trainings/7am-vagrant/vagresearch/
+  368  vagrant up
+  369  vagrant help
+  370  vagrant ssh
+  371  cd /d/Trainings/7am-vagrant/AWSKEYS/
+  372  ssh -i IAMarunpro-key-dev.pem root@172.31.21.196
+  373  pwd
+  374  ssh -i IAMarunpro-key-dev.pem ubuntu@172.31.21.196
+  375  ssh -i IAMarunpro-key-dev.pem ubuntu@54.209.213.226
+  376  ssh -i IAMarunpro-key-dev.pem root@54.209.213.226
+  377  ssh -i IAMarunpro-key-dev.pem ubuntu@54.209.213.226
+  378  pwd
+  379  exit
+  380  cd /d/Trainings/7am-vagrant/AWSKEYS/
+  381  ssh -i IAMarunpro-key-dev.pem ubuntu@3.85.34.185
+  382  ssh -i IAMarunpro-key-dev.pem ubuntu@3.85.34.185
+  383  exit
+  384  pwd
+  385  cd /d/Trainings/7am-vagrant/AWSKEYS/
+  386  ssh -i IAMarunpro-key-dev.pem centos@107.23.252.70
+  387  logout
+  388  ping highway-prod-elb-1343312447.eu-west-1.elb.amazonaws.com
+  389  pwd
+  390  cd /d/Trainings/7am-vagrant/AWSKEYS/
+  391  ls
+  392  ssh -i IAMarunpro-key-dev.pem centos@
+  393  ssh -i IAMarunpro-key-dev.pem centos@3.82.171.106
+  394  logout
+  395  cd /d/Trainings/7am-vagrant/AWSKEYS/
+  396  pwd
+  397  ssh -i IAMarunpro-key-dev.pem centos@52.54.242.232
+  398  ssh -i IAMarunpro-key-dev.pem root@52.54.242.232
+  399  ssh -i IAMarunpro-key-dev.pem root@52.54.242.232
+  400  exit
+  401  pwd
+  402  cd /d/Trainings/7am-vagrant/AWSKEYS/
+  403  ssh -i IAMarunpro-key-dev.pem centos@34.205.78.32
+  404  ssh -i IAMarunpro-key-dev.pem root@3.94.80.112
+  405  ssh -i IAMarunpro-key-dev.pem centos@3.94.80.112
+  406  ssh -i IAMarunpro-key-dev.pem centos@3.94.80.112
+  407  logout
+  408  cd /d/Trainings/7am-vagrant/
+  409  mkdir -p vprofileproject
+  410  vagrant init
+  411  cd vprofileproject/
+  412  vagrant init
+  413  vagrant --help
+  414  vagrant init
+  415  vagrant up
+  416  cat Vagrantfile 
+  417  vagrant up weber01
+  418  logout
+  419  cd /d/Trainings/7am-vagrant/vprofileproject/
+  420  vagrant up
+  421  vagrant
+  422  agrant halt
+  423  vagrant halt
+  424  vagrant suspend
+  425  logout
+  426  cd /d/Trainings/7am-vagrant/vprofileproject/
+  427  vagrant resume
+  428  vagrant up
+  429  vagrant resume
+  430  vagrant destroy
+  431  vagrant up
+  432  vagrant destroy
+  433  vagrant up
+  434  vagrant ssh websrvr01
+  435  vagrant ssh websrv01
+  436  vagrant destroy
+  437  vagrant ssh websrv01
+  438  vagrant destroy
+  439  ls
+  440  cat Vagrantfile 
+  441  vagrant up
+  442  `vagrant ssh db01
+  443  vagrant ssh db01
+  444  vagrant halt
+  445  logout
+  446  vagrant ssh mc01
+  447  cd /d/Trainings/7am-vagrant/vprofileproject/
+  448  vagrant ssh mc01
+  449  logout
+  450  vagrant ssh rmq01
+  451  cd /d/Trainings/7am-vagrant/vprofileproject/
+  452  vagrant ssh rmq01
+  453  logout
+  454  cd /d/Trainings/7am-vagrant/vprofileproject/
+  455  vagrant ssh app01
+  456  logout
+  457  cd /d/Trainings/7am-vagrant/vprofileproject/
+  458  vagrant ssh websrv01
+  459  logout
+  460  vagrant up app01 db01
+  461  pwd
+  462  cd /d/Trainings/7am-vagrant/vprofileproject/
+  463  ls
+  464  cp Vagrantfile Vagrantfile_13Dec2019_0559.bkp
+  465  ls
+  466  vagrant up app01 db01
+  467  cd ..
+  468  mkdir -p gitrepositories
+  469  cd gitrepositories/
+  470  git init
+  471  mkdir -p aws
+  472  mkdir -p jenkins
+  473  mkdir -p ansible dockers kubernetes maven terraform
+  474  ls
+  475  vim READ.md
+  476  git add .
+  477  git status
+  478  pwd
+  479  ls
+  480  git status
+  481  git log
+  482  git commit
+  483  pwd
+  484  ls
+  485  ls -laltr
+  486  git status
+  487  git
+  488  git diff
+  489  github login
+  490  pwd
+  491  pwd
+  492  git status
+  493  git add .
+  494  git commit
+  495  git commit -m "First Commit"
+  496  git --version
+  497  git config --global user.name "Arun Arora"
+  498  git config --global user.email "aarora_98@yahoo.com"
+  499  pwd
+  500  cd ..
+  501  pwd
+  502  cd gitrepositories/
+  503  ls
+  504  ls -ltr
+  505  vim vagrant/READVAGARANT.md
+  506  ls
+  507  mkdir -p vagrant
+  508  ls
+  509  vim vagrant/vagrant_readme.md
+  510  git status
+  511  pwd
+  512  cp ../vprofileproject/Vagrantfile ./vagrant/
+  513  git status
+  514  git log
+  515  git log
+  516  git status
+  517  git add .
+  518  git status
+  519  git commit
+  520  git commit -m "vagrantfile commit baseline infra"
+  521  git clone https://github.com/aruarora/DevOps.git
+  522  ls -ltr
+  523  mv -r aws/ DevOps/
+  524  ls -ltr
+  525  move aws/ DevOps/
+  526  mv aws/ DevOps/
+  527  mv * DevOps/
+  528  mv [?D]* DevOps/
+  529  mv a* DevOps/
+  530  ls -ltr
+  531  cd DevOps/
+  532  ls -ltr
+  533  pwd
+  534  ls -altr
+  535  git status
+  536  git log
+  537  git config --global user.name "aruarora"
+  538  git config --global user.email "aarora_98@yahoo.com"
+  539  git add .
+  540  git status
+  541  git branch
+  542  git status
+  543  git branch
+  544  git branch --list
+  545  git branch branch1
+  546  git branch --list
+  547  git status
+  548  git push
+  549  git commit -m "adding to DevOps master 13-12-2019 - vagrant/vagrantfile"
+  550  git push
+  551  ls
+  552  cp vagrant/Vagrantfile vagrant/Vagrantfile13-12-2019_backup
+  553  vim vagrant/Vagrantfile
+  554  git status
+  555  git branch
+  556  git branch branch1
+  557  git checkout branch1
+  558  git branch
+  559  git checkout branch1
+  560  git status
+  561  git add .
+  562  git checkout branch1
+  563  git add .
+  564  git push
+  565  history
+  566  git commit -m "Date: 13-Dec-2019; Added vagrantfile chnages and backup orignal baseline on 13-Dec-2019"
+  567  git push
+  568  git branch delete branch1
+  569  git branch
+  570  git branch -a
+  571  git branch -d delete
+  572  git branch -a
+  573  git checkout branch1
+  574  git branch -a
+  575  git pull master
+  576  git pull origin master
+  577  git branch -a
+  578  git checkout branch1
+  579  git status
+  580  git commit -m "pull from orign master"
+  581  git push
+  582  git push --set-upstream origin branch1
+  583  git branch -m developer1
+  584  git branch -a
+  585  git push origin branch1 developer1
+  586  git commit
+  587  git push origin branch1 developer1
+  588  git checkout master
+  589  git push origin branch1 developer1
+  590  git branch -a
+  591  git checkout developer1
+  592  history
+  593  history | grep developer1
+  594  git branh
+  595  git branch
+  596  git push origin --delete
+  597  git push origin --delete branch1
+  598  history 
+  599  history | grep "git push"
+  600  git push
+  601  git branch -a
+  602  git push origin developer1
+  603  history > history_work.txt
