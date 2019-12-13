@@ -1,0 +1,122 @@
+  468  mkdir -p gitrepositories
+  469  cd gitrepositories/
+  470  git init
+  476  git add .
+  477  git status
+  480  git status
+  481  git log
+  482  git commit
+  486  git status
+  487  git
+  488  git diff
+  489  github login
+  492  git status
+  493  git add .
+  494  git commit
+  495  git commit -m "First Commit"
+  496  git --version
+  497  git config --global user.name "Arun Arora"
+  498  git config --global user.email "aarora_98@yahoo.com"
+  502  cd gitrepositories/
+  510  git status
+  513  git status
+  514  git log
+  515  git log
+  516  git status
+  517  git add .
+  518  git status
+  519  git commit
+  520  git commit -m "vagrantfile commit baseline infra"
+  521  git clone https://github.com/aruarora/DevOps.git
+  535  git status
+  536  git log
+  537  git config --global user.name "aruarora"
+  538  git config --global user.email "aarora_98@yahoo.com"
+  539  git add .
+  540  git status
+  541  git branch
+  542  git status
+  543  git branch
+  544  git branch --list
+  545  git branch branch1
+  546  git branch --list
+  547  git status
+  548  git push
+  549  git commit -m "adding to DevOps master 13-12-2019 - vagrant/vagrantfile"
+  550  git push
+  554  git status
+  555  git branch
+  556  git branch branch1
+  557  git checkout branch1
+  558  git branch
+  559  git checkout branch1
+  560  git status
+  561  git add .
+  562  git checkout branch1
+  563  git add .
+  564  git push
+  566  git commit -m "Date: 13-Dec-2019; Added vagrantfile chnages and backup orignal baseline on 13-Dec-2019"
+  567  git push
+  568  git branch delete branch1
+  569  git branch
+  570  git branch -a
+  571  git branch -d delete
+  572  git branch -a
+  573  git checkout branch1
+  574  git branch -a
+  575  git pull master
+  576  git pull origin master
+  577  git branch -a
+  578  git checkout branch1
+  579  git status
+  580  git commit -m "pull from orign master"
+  581  git push
+  582  git push --set-upstream origin branch1
+  583  git branch -m developer1
+  584  git branch -a
+  585  git push origin branch1 developer1
+  586  git commit
+  587  git push origin branch1 developer1
+  588  git checkout master
+  589  git push origin branch1 developer1
+  590  git branch -a
+  591  git checkout developer1
+  594  git branh
+  595  git branch
+  596  git push origin --delete
+  597  git push origin --delete branch1
+  599  history | grep "git push"
+  600  git push
+  601  git branch -a
+  602  git push origin developer1
+  606  git status
+  607  git add origin master
+  608  git add . origin master
+  609  git add .
+  610  git branch -a
+  611  git push
+  612  git push origin developer1
+  614  history | grep git > history_work.txt
+  616  git commit -m "added git history file"
+  617  git push
+  618  git push origin HEAD
+  619  git status
+  620  git log
+  621  git checkout master
+  622  git status
+  623  git -a
+  624  git branch --a
+  625  git branch -a
+  626  git branch master
+  627  git branch -a
+  628  git branch origin master
+  629  git branch -a
+  630  git checkout master
+  631  git add .
+  632  git checkout master
+  633  git commit -m "history_work.txt added to branch"
+  634  git checkout master
+  635  git branch -a
+  636  git status
+  637  git push
+  650  history | grep git > historyofGit.txt
