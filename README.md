@@ -1,3 +1,3 @@
 # DevOps
 DevOps Work
-integrated github account with Jenkins
+Testing integration of github account with Jenkins on Oracle cloud
