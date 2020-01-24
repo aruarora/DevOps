@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+
+#docker01 centos7 machine
+config.vm.define "dockercent7" do |dockercent7|
+    dockercent7.vm.box = "geerlingguy/centos7"
+    dockercent7.vm.hostname = "dockercent7"
+    dockercent7.vm.network "private_network", ip: "xx.xx.xx.xx"
+   end
+
+config.vm.define "dockerubuntu18" do |dockerubuntu18|
+        dockerubuntu18.vm.box = "ubuntu/bionic64"
+        dockerubuntu18.vm.hostname = "dockerubuntu18"
+        dockerubuntu18.vm.network "private_network", ip: "xx.xx.xx.xy"
+  end
+end

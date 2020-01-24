@@ -1,0 +1,1 @@
+{"virtualbox":{"/vm_data":{"guestpath":"/vm_data","hostpath":"D:/Trainings/7am-vagrant/vro-datadir","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/Trainings/7am-vagrant/Python","disabled":false,"__vagrantfile":true}}}
