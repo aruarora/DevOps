@@ -1,0 +1,175 @@
+vagrant@cntrlsrvr01:~/koala/exercise1$ ansible -i inventory-qa -m ping websrvr01
+websrvr01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+vagrant@cntrlsrvr01:~/koala/exercise1$ vim inventory-qa
+vagrant@cntrlsrvr01:~/koala/exercise1$ ansible -i inventory-qa -m ping dbsrvr01
+dbsrvr01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+vagrant@cntrlsrvr01:~/koala/exercise1$ vim inventory-qa
+vagrant@cntrlsrvr01:~/koala/exercise1$ ansible -i inventory-qa -m ping supergrp
+websrvr01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+dbsrvr01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+websrvr02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
+
+
+vagrant@cntrlsrvr01:~/koala/exercise1$ ansible -i inventory-qa -m ping '*'
+websrvr01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+websrvr02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+dbsrvr01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
+
+
+
+vagrant@cntrlsrvr01:~/koala/exercise1$ cat inventory-qa
+websrvr01 ansible_host=192.168.33.16
+websrvr02 ansible_host=192.168.33.17
+dbsrvr01  ansible_host=192.168.33.19
+
+[websrvrgrp]
+websrvr01
+websrvr02
+
+
+[dbsrvrgrp]
+dbsrvr01
+
+[supergrp:children]
+websrvrgrp
+dbsrvrgrp
+
+#[websrvrgrp:vars]
+#ansibel_user=vagrant
+#ansible_ssh_pass=vagrant
+#ansible_connection=ssh
+
+
+#[dbsrvrgrp:vars]
+#ansibel_user=vagrant
+#ansible_ssh_pass=vagrant
+#ansible_connection=ssh
+
+[suoergrp:vars]
+ansibel_user=vagrant
+ansible_ssh_pass=vagrant
+ansible_connection=ssh
+
+
+
+
+
+vagrant@cntrlsrvr01:~/koala/exercise1$ ansible -i inventory-qa -m yum -a "name=httpd state=present" websrvrgrp --become
+
+
+vagrant@cntrlsrvr01:~/koala/exercise1$ ansible -i inventory-qa -m yum -a "name=httpd state=present" websrvrgrp --become
+
+websrvr01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "httpd-2.4.6-90.el7.centos.x86_64 providing httpd is already installed"
+    ]
+}
+websrvr02 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": true,
+    "changes": {
+        "installed": [
+            "httpd"
+        ]
+    },
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: centos.hqserv.co.il\n * extras: mirror.squ.edu.om\n * updates: centos.hqserv.co.il\nResolving Dependencies\n--> Running transaction check\n---> Package httpd.x86_64 0:2.4.6-90.el7.centos will be installed\n--> Processing Dependency: httpd-tools = 2.4.6-90.el7.centos for package: httpd-2.4.6-90.el7.centos.x86_64\n--> Processing Dependency: /etc/mime.types for package: httpd-2.4.6-90.el7.centos.x86_64\n--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.4.6-90.el7.centos.x86_64\n--> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.4.6-90.el7.centos.x86_64\n--> Running transaction check\n---> Package apr.x86_64 0:1.4.8-5.el7 will be installed\n---> Package apr-util.x86_64 0:1.5.2-6.el7 will be installed\n---> Package httpd-tools.x86_64 0:2.4.6-90.el7.centos will be installed\n---> Package mailcap.noarch 0:2.1.41-2.el7 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package            Arch          Version                     Repository   Size\n================================================================================\nInstalling:\n httpd              x86_64        2.4.6-90.el7.centos         base        2.7 M\nInstalling for dependencies:\n apr                x86_64        1.4.8-5.el7                 base        103 k\n apr-util           x86_64        1.5.2-6.el7                 base         92 k\n httpd-tools        x86_64        2.4.6-90.el7.centos         base         91 k\n mailcap            noarch        2.1.41-2.el7                base         31 k\n\nTransaction Summary\n================================================================================\nInstall  1 Package (+4 Dependent packages)\n\nTotal download size: 3.0 M\nInstalled size: 10 M\nDownloading packages:\n--------------------------------------------------------------------------------\nTotal                                              267 kB/s | 3.0 MB  00:11     \nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : apr-1.4.8-5.el7.x86_64                                       1/5 \n  Installing : apr-util-1.5.2-6.el7.x86_64                                  2/5 \n  Installing : httpd-tools-2.4.6-90.el7.centos.x86_64                       3/5 \n  Installing : mailcap-2.1.41-2.el7.noarch                                  4/5 \n  Installing : httpd-2.4.6-90.el7.centos.x86_64                             5/5 \n  Verifying  : apr-1.4.8-5.el7.x86_64                                       1/5 \n  Verifying  : mailcap-2.1.41-2.el7.noarch                                  2/5 \n  Verifying  : httpd-tools-2.4.6-90.el7.centos.x86_64                       3/5 \n  Verifying  : apr-util-1.5.2-6.el7.x86_64                                  4/5 \n  Verifying  : httpd-2.4.6-90.el7.centos.x86_64                             5/5 \n\nInstalled:\n  httpd.x86_64 0:2.4.6-90.el7.centos                                            \n\nDependency Installed:\n  apr.x86_64 0:1.4.8-5.el7                     apr-util.x86_64 0:1.5.2-6.el7    \n  httpd-tools.x86_64 0:2.4.6-90.el7.centos     mailcap.noarch 0:2.1.41-2.el7    \n\nComplete!\n"
+    ]
+}
+vagrant@cntrlsrvr01:~/koala/exercise1$
+vagrant@cntrlsrvr01:~/koala/exercise1$ ansible -i inventory-qa -m yum -a "name=httpd state=present" websrvrgrp --become
+websrvr01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "httpd-2.4.6-90.el7.centos.x86_64 providing httpd is already installed"
+    ]
+}
+websrvr02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "httpd-2.4.6-90.el7.centos.x86_64 providing httpd is already installed"
+    ]
+}
+
+
+
+to copy file from vagrent (guest) to Host machine:
+
+vagrant port    [to find host port]
+
+scp -P 2200 vagrant@127.0.0.1:/vagrant/some-file.txt .
+
+
+
+
+

@@ -1,0 +1,24 @@
+websrv01 ansible_host=172.31.16.106 
+websrv02 ansible_host=172.31.21.90 
+dbsrv01 ansible_host=172.31.42.229 
+
+
+[websrvgrp]
+websrv01
+websrv02
+
+[dbsrvgrp]
+dbsrv01
+
+
+[dc_az:children]
+websrvgrp
+dbsrvgrp
+
+#[websrvgrp:vars]
+#ansible_user=centos
+#ansible_ssh_private_key_file=clients01-key.pem
+
+[dc_az:vars]
+ansible_user=centos
+ansible_ssh_private_key_file=clients01-key.pem

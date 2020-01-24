@@ -1,0 +1,24 @@
+---
+- name: Setup web svc 
+  hosts: websrvgrp
+  become: yes
+  tasks: 
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start & enable httpd
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Copy file with owner and permissions
+      copy:
+       src: index.html
+       dest: /var/www/html/index.html
+       owner: root
+       group: root
+       mode: '0644'
+       backup: yes

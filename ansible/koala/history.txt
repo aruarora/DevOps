@@ -1,0 +1,299 @@
+    1  clear
+    2  ls
+    3  ansile --version
+    4  ansible --version
+    5  clear
+    6  mkidr koala
+    7  mkdir koala
+    8  clear
+    9  ls
+   10  cd koala/
+   11  ls
+   12  clear
+   13  mkdir exercise1
+   14  cd exercise1/
+   15  vim inventory-qa
+   16  clear
+   17  ls
+   18  cd koala/exercise1/
+   19  ls
+   20  vim clients01.pem
+   21  cp ~/clients01-key.pem .
+   22  ls
+   23  vim inventory-qa 
+   24  clear
+   25  cat inventory-qa 
+   26  ansible -i inventory-qa -m ping websrv01
+   27  ls -l
+   28  chmod 400 clients01-key.pem 
+   29  clear
+   30  ansible -i inventory-qa -m ping websrv01
+   31  cd
+   32  ls -l
+   33  ls -la
+   34  cd .ssh/
+   35  ls
+   36  cat known_hosts 
+   37  vim known_hosts 
+   38  cd
+   39  clear
+   40  ls
+   41  cd koala/
+   42  ls
+   43  cd exercise1/
+   44  ls
+   45  cat inventory-qa 
+   46  ssh -i clients01-key.pem centos@172.31.16.106
+   47  clear
+   48  sudo vim /etc/ansible/ansible.cfg 
+   49  ssh -i clients01-key.pem centos@172.31.16.106
+   50  ansible -i inventory-qa -m ping websrv01
+   51  cat ~/.ssh/known_hosts 
+   52  clear
+   53  sudo vim /etc/ansible/ansible.cfg 
+   54  clear
+   55  ls
+   56  cat inventory-qa 
+   57  ansible -i inventory-qa -m ping websrv02
+   58  ansible -i inventory-qa -m ping dbsrv01
+   59  clear
+   60  vim inventory-qa 
+   61  ansible -i inventory-qa -m ping websrvgrp
+   62  ansible --version
+   63  vim inventory-qa 
+   64  clear
+   65  ansible -i inventory-qa -m ping websrvgrp
+   66  ansible -i inventory-qa -m ping dbsrvgrp
+   67  ansible -i inventory-qa -m ping dc-az
+   68  ansible -i inventory-qa -m ping dc_az
+   69  clear
+   70  ansible -i inventory-qa -m ping all
+   71  ansible -i inventory-qa -m ping '*'
+   72  clear
+   73  ls
+   74  vim inventory-qa 
+   75  ansible -i inventory-qa -m ping all
+   76  vim inventory-qa 
+   77  clear
+   78  ansible -i inventory-qa -m ping all
+   79  clear
+   80  ls
+   81  cat inventory-qa 
+   82  clear
+   83  ansible -i inventory-qa -m yum -a "name=httpd state=present"  websrv01 
+   84  cat inventory-qa 
+   85  clear
+   86  ansible -i inventory-qa -m yum -a "name=httpd state=present"  websrv01 --become
+   87  clear
+   88  ansible -i inventory-qa -m yum -a "name=httpd state=present"  websrv01 --become
+   89  clear
+   90  ansible -i inventory-qa -m service -a "name=httpd state=started enabled=yes" websrv01 --become
+   91  clear
+   92  ansible -i inventory-qa -m service -a "name=httpd state=started enabled=yes" websrv01 --become
+   93  clear
+   94  ansible -i inventory-qa -m yum -a "name=httpd state=present"  websrvgrp --become
+   95  clear
+   96  history > history.txt
+   97  ls
+   98  cd ..
+   99  ls
+  100  cd ..
+  101  ls
+  102  clear
+  103  ls
+  104  cd koala/
+  105  ls
+  106  cd exercise1/
+  107  ls
+  108  clear
+  109  cat inventory-qa 
+  110  ansible -i inventory-qa -m ping all
+  111  clear
+  112  history
+  113  clear
+  114  ls
+  115  vim index.html
+  116  ls
+  117  ansible -m copy -a "src=index.html dest=/var/www/html/index.html" websrvgrp 
+  118  ansible -i inventory-qa -m copy -a "src=index.html dest=/var/www/html/index.html" websrvgrp 
+  119  ansible -i inventory-qa -m copy -a "src=index.html dest=/var/www/html/index.html" websrvgrp --become
+  120  clear
+  121  ansible -i inventory-qa -m copy -a "src=index.html dest=/var/www/html/index.html" websrvgrp --become
+  122  ls
+  123  clear
+  124  vim index.html 
+  125  ansible -i inventory-qa -m copy -a "src=index.html dest=/var/www/html/index.html" websrvgrp --become
+  126  clear
+  127  cd ..
+  128  ls
+  129  cp -r exercise1 exercise2
+  130  cd exercise2/
+  131  ls
+  132  clear
+  133  ls
+  134  clear
+  135  vim web_deb_deploy.yml
+  136  ansible-playbook -i inventory-qa web_deb_deploy.yml 
+  137  vim web_deb_deploy.yml 
+  138  clear
+  139  ansible -i inventory-qa -m yum -a "name=httpd state=absent" websrvgrp --become
+  140  clear
+  141  ansible-playbook -i inventory-qa web_deb_deploy.yml 
+  142  vim web_deb_deploy.yml 
+  143  clear
+  144  vim web_deb_deploy.yml 
+  145  ansible-playbook -i inventory-qa web_deb_deploy.yml 
+  146  vim web_deb_deploy.yml 
+  147  ansible-playbook web_deb_deploy.yml 
+  148  vim web_deb_deploy.yml 
+  149  ansible-playbook web_deb_deploy.yml 
+  150  clear
+  151  ansible-playbook web_deb_deploy.yml 
+  152  ansible-playbook -i inventory-qa web_deb_deploy.yml 
+  153  vim web_deb_deploy.yml 
+  154  ansible-playbook -i inventory-qa web_deb_deploy.yml 
+  155  vim index.html 
+  156  ansible-playbook -i inventory-qa web_deb_deploy.yml 
+  157  clear
+  158  ls
+  159  cat inventory-qa 
+  160  ssh -i clients01-key.pem centos@172.31.16.106
+  161  clear
+  162  vim web_deb_deploy.yml 
+  163  cd ..
+  164  ls
+  165  cp -r exercise2 exercise3
+  166  cd exercise3/
+  167  ls
+  168  vim web_deb_deploy.yml 
+  169  ansible-playbook web_deb_deploy.yml 
+  170  ansible-playbook -i inventory-qa web_deb_deploy.yml 
+  171  vim web_deb_deploy.yml 
+  172  ansible-playbook -i inventory-qa web_deb_deploy.yml 
+  173  clear
+  174  cd ..
+  175  ls
+  176  cp -r exercise3 exercise4
+  177  cd exercise4/
+  178  ls
+  179  sudo vim /etc/ansible/ansible.cfg 
+  180  cd ..
+  181  ls
+  182  cd ..
+  183  sudo apt install zip unzip -y
+  184  ls
+  185  cd koala/
+  186  ls
+  187  history > history.txt
+  188  ls
+  189  cd ..
+  190  zip -r koala koala_230119.zip
+  191  zip -r koala_230119.zip koala
+  192  ls
+  193  clear
+  194  ls
+  195  cd koala/
+  196  ls
+  197  cp -r exercise4 exercise5
+  198  sudo vim /etc/ansible/ansible.cfg 
+  199  ls
+  200  cd exercise5/
+  201  ls
+  202  vim ansible.cfg
+  203  sudo vim /etc/ansible/ansible.cfg 
+  204  vim ansible.cfg
+  205  sudo touch /var/log/ansible.log
+  206  sudo chown ubuntu.ubuntu /var/log/ansible.log
+  207  cat inventory-qa 
+  208  clear
+  209  ls
+  210  vim ansible.cfg 
+  211  cat ansible.cfg 
+  212  sudo vim /etc/ansible/ansible.cfg 
+  213  vim ansible.cfg 
+  214  clear
+  215  ls
+  216  vim inventory-qa 
+  217  ansible-playbook web_deb_deploy.yml 
+  218  vim ansible.cfg 
+  219  clear
+  220  ansible-playbook web_deb_deploy.yml 
+  221  clear
+  222  ls /var/log/ansible.log 
+  223  cat /var/log/ansible.log 
+  224  clear
+  225  vim ansible.cfg 
+  226  ansible-playbook web_deb_deploy.yml -vv
+  227  cat /var/log/ansible.log 
+  228  clear
+  229  ansible-playbook web_deb_deploy.yml -vvv
+  230  clear
+  231  ansible-playbook web_deb_deploy.yml -vvvv
+  232  clear
+  233  ansible-playbook web_deb_deploy.yml -vvvvv
+  234  ansible-playbook web_deb_deploy.yml -vvvv
+  235  cat /var/log/ansible.log 
+  236  clear
+  237  cd ..
+  238  ls
+  239  cp -r exercise5 exercise6
+  240  cd exercise6/
+  241  clear
+  242  ls
+  243  rm -rf index.html history.txt 
+  244  ls
+  245  mv web_deb_deploy.yml deb_deploy.yml 
+  246  vim deb_deploy.yml 
+  247  ansible-playbook deb_deploy.yml 
+  248  vim ansible.cfg 
+  249  vim ../exercise5/ansible.cfg 
+  250  clear
+  251  ansible-playbook deb_deploy.yml 
+  252  clear
+  253  ansible-playbook deb_deploy.yml 
+  254  cat inventory-qa 
+  255  ssh -i clients01-key.pem centos@172.31.42.229
+  256  clear
+  257  ls
+  258  vim deb_deploy.yml 
+  259  mv deb_deploy.yml db_deploy.yml 
+  260  clear
+  261  ansible-playbook db_deploy.yml 
+  262  vim deb_deploy.yml 
+  263  vim db_deploy.yml 
+  264  ansible-playbook db_deploy.yml 
+  265  cd ..
+  266  ls
+  267  cp -r exercise6 exercise7
+  268  ls
+  269  clear
+  270  ls
+  271  cd exercise7/
+  272  ls
+  273  vim db_deploy.yml 
+  274  ansible-playbook db_deploy.yml 
+  275  vim db_deploy.yml 
+  276  cd ..
+  277  ls
+  278  cp -r exercise7 exercise8
+  279  cd exercise8/
+  280  ls
+  281  clear
+  282  ls
+  283  mkdir group_vars
+  284  head db_deploy.yml 
+  285  vim group_vars/all
+  286  ls
+  287  clear
+  288  vim db_deploy.yml 
+  289  cat group_vars/all 
+  290  tail db_deploy.yml 
+  291  clear
+  292  ansible-playbook db_deploy.yml 
+  293  vim group_vars/all 
+  294  ansible-playbook db_deploy.yml 
+  295  clear
+  296  ls
+  297  cd ..
+  298  ls
+  299  history > history.txt

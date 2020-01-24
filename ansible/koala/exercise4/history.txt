@@ -1,0 +1,96 @@
+    1  clear
+    2  ls
+    3  ansile --version
+    4  ansible --version
+    5  clear
+    6  mkidr koala
+    7  mkdir koala
+    8  clear
+    9  ls
+   10  cd koala/
+   11  ls
+   12  clear
+   13  mkdir exercise1
+   14  cd exercise1/
+   15  vim inventory-qa
+   16  clear
+   17  ls
+   18  cd koala/exercise1/
+   19  ls
+   20  vim clients01.pem
+   21  cp ~/clients01-key.pem .
+   22  ls
+   23  vim inventory-qa 
+   24  clear
+   25  cat inventory-qa 
+   26  ansible -i inventory-qa -m ping websrv01
+   27  ls -l
+   28  chmod 400 clients01-key.pem 
+   29  clear
+   30  ansible -i inventory-qa -m ping websrv01
+   31  cd
+   32  ls -l
+   33  ls -la
+   34  cd .ssh/
+   35  ls
+   36  cat known_hosts 
+   37  vim known_hosts 
+   38  cd
+   39  clear
+   40  ls
+   41  cd koala/
+   42  ls
+   43  cd exercise1/
+   44  ls
+   45  cat inventory-qa 
+   46  ssh -i clients01-key.pem centos@172.31.16.106
+   47  clear
+   48  sudo vim /etc/ansible/ansible.cfg 
+   49  ssh -i clients01-key.pem centos@172.31.16.106
+   50  ansible -i inventory-qa -m ping websrv01
+   51  cat ~/.ssh/known_hosts 
+   52  clear
+   53  sudo vim /etc/ansible/ansible.cfg 
+   54  clear
+   55  ls
+   56  cat inventory-qa 
+   57  ansible -i inventory-qa -m ping websrv02
+   58  ansible -i inventory-qa -m ping dbsrv01
+   59  clear
+   60  vim inventory-qa 
+   61  ansible -i inventory-qa -m ping websrvgrp
+   62  ansible --version
+   63  vim inventory-qa 
+   64  clear
+   65  ansible -i inventory-qa -m ping websrvgrp
+   66  ansible -i inventory-qa -m ping dbsrvgrp
+   67  ansible -i inventory-qa -m ping dc-az
+   68  ansible -i inventory-qa -m ping dc_az
+   69  clear
+   70  ansible -i inventory-qa -m ping all
+   71  ansible -i inventory-qa -m ping '*'
+   72  clear
+   73  ls
+   74  vim inventory-qa 
+   75  ansible -i inventory-qa -m ping all
+   76  vim inventory-qa 
+   77  clear
+   78  ansible -i inventory-qa -m ping all
+   79  clear
+   80  ls
+   81  cat inventory-qa 
+   82  clear
+   83  ansible -i inventory-qa -m yum -a "name=httpd state=present"  websrv01 
+   84  cat inventory-qa 
+   85  clear
+   86  ansible -i inventory-qa -m yum -a "name=httpd state=present"  websrv01 --become
+   87  clear
+   88  ansible -i inventory-qa -m yum -a "name=httpd state=present"  websrv01 --become
+   89  clear
+   90  ansible -i inventory-qa -m service -a "name=httpd state=started enabled=yes" websrv01 --become
+   91  clear
+   92  ansible -i inventory-qa -m service -a "name=httpd state=started enabled=yes" websrv01 --become
+   93  clear
+   94  ansible -i inventory-qa -m yum -a "name=httpd state=present"  websrvgrp --become
+   95  clear
+   96  history > history.txt

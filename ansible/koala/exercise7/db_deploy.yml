@@ -1,0 +1,38 @@
+---
+- name: Setup db svc
+  hosts: dbsrvgrp
+  vars:
+    db1: accounts
+    db2: noaccounts
+    dbuser: admin
+    dbpass: Cr@zzzyFr0g
+  tasks:
+    - name: Install mariadb
+      yum:
+        name: mariadb-server
+        state: present
+
+    - name: Install MySQL-python
+      yum:
+        name: MySQL-python
+        state: present
+
+    - name: Start & enable mariadb
+      service:
+        name: mariadb
+        state: started
+        enabled: yes
+
+    - name: Create new databases with names 'accounts' and 'noaccounts'
+      mysql_db:
+        name:
+         - "{{db1}}"
+         - "{{db2}}"
+        state: present
+
+    - name: Create database user with name 'admin' 
+      mysql_user:
+        name: "{{dbuser}}"
+        password: "{{dbpass}}"
+        priv: '*.*:ALL'
+        state: present
